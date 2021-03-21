@@ -39,6 +39,7 @@ const Login: React.FC = (props: any) => {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             setEmail(e.target.value);
           }}
+          required
         />
         <br />
         <label htmlFor="password">Password</label>
@@ -50,8 +51,9 @@ const Login: React.FC = (props: any) => {
             setPassword(e.target.value);
           }}
         />
+        <br />
+        <button onClick={login}>Login</button>
       </form>
-      <button onClick={login}>Login</button>
       <p className={styles.login__error}>{code}</p>
       <p className={styles.login__error}>{message}</p>
     </div>
